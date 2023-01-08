@@ -23,6 +23,9 @@ import org.eclipse.jdt.core.dom.ASTParser;
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.MethodInvocation;
+import org.eclipse.jdt.core.search.SearchEngine;
+import org.eclipse.m2e.core.MavenPlugin;
+import org.eclipse.m2e.core.internal.IMavenConstants;
 
 /**
  * This class controls all aspects of the application's execution
@@ -32,6 +35,8 @@ public class Application implements IApplication {
 	@Override
 	public Object start(IApplicationContext context) throws Exception {
 		f();
+		
+		// MavenPlugin.getMavenProjectRegistry().getProjects()
 
 		IWorkspace workspace = ResourcesPlugin.getWorkspace();
 		IWorkspaceRoot root = workspace.getRoot();
@@ -41,6 +46,10 @@ public class Application implements IApplication {
 		for (IProject project : projects) {
 			System.out.println(project.getName());
 		}
+		
+		 SearchEngine engine = new SearchEngine();
+		 
+		
 
 		System.out.println("Hello RCP World!");
 		return IApplication.EXIT_OK;
@@ -61,7 +70,7 @@ public class Application implements IApplication {
 
 		// set the Java nature
 		IProjectDescription description = project.getDescription();
-		description.setNatureIds(new String[] { JavaCore.NATURE_ID });
+		description.setNatureIds(new String[] { JavaCore.NATURE_ID,IMavenConstants.NATURE_ID });
 
 		// create the project
 		project.setDescription(description, null);

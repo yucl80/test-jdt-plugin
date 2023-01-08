@@ -7,6 +7,11 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;bundle-version="3.18.100",
  org.eclipse.jdt.core;bundle-version="3.32.0",
  org.eclipse.ui.navigator.resources;bundle-version="3.8.500",
- org.eclipse.jdt.launching;bundle-version="3.19.800"
+ org.eclipse.jdt.launching;bundle-version="3.19.800",
+ org.eclipse.m2e.jdt;bundle-version="2.0.4",
+ org.eclipse.m2e.core;bundle-version="2.0.5",
+ org.eclipse.m2e.discovery;bundle-version="2.0.1",
+ org.eclipse.m2e.maven.runtime,
+ org.eclipse.jdt.core.manipulation;bundle-version="1.17.0"
 Automatic-Module-Name: ss
 Bundle-RequiredExecutionEnvironment: JavaSE-11
