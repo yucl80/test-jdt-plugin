@@ -37,7 +37,7 @@ public class Application implements IApplication {
 		f();
 		
 		// MavenPlugin.getMavenProjectRegistry().getProjects()
-
+		
 		IWorkspace workspace = ResourcesPlugin.getWorkspace();
 		IWorkspaceRoot root = workspace.getRoot();
 		// Get all projects in the workspace
