@@ -44,7 +44,7 @@ public class Application implements IApplication {
 		IProject[] projects = root.getProjects();
 		// Loop over all projects
 		for (IProject project : projects) {
-			System.out.println(project.getName());
+			System.out.println("project name:"+ project.getName());
 		}
 		
 		 SearchEngine engine = new SearchEngine();
@@ -62,7 +62,7 @@ public class Application implements IApplication {
 
 	public void f() throws Exception {
 		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject("testAddStatements");
-		System.out.println("root" + ResourcesPlugin.getWorkspace().getRoot().getLocation().toOSString());
+		System.out.println("root: " + ResourcesPlugin.getWorkspace().getRoot().getLocation().toOSString());
 		if (!project.exists()) {
 			project.create(null);
 		}
